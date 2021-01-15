@@ -13,15 +13,17 @@ function isValid(array, num) {
   }
 }
 // Fine funzione.
-// In un alert, dobbiamo mostrare all'utente 5 numeri casuali:
+// In un alert, dobbiamo mostrare all'utente 5 numeri casuali diversi:
 var numeriCasuali = [ ];
 var numeroCasuale;
 var min = 1;
 var max = 100;
 
-for (var i = 0; i < 5; i++) {
-   numeroCasuale = Math.floor(Math.random() * (max + 1 - min) + min);
-   numeriCasuali.push(numeroCasuale);
+while (numeriCasuali.length < 5) {
+  numeroCasuale = Math.floor(Math.random() * (max + 1 - min) + min);
+  if(numeriCasuali.indexOf(numeroCasuale) === -1) {
+    numeriCasuali.push(numeroCasuale)
+  }
 }
 alert(numeriCasuali);
 // Dopo 30 secondi dalla chiusura dell'alert, l'utente dovrà inserire 5 numeri a piacere
