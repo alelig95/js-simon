@@ -40,9 +40,9 @@ setTimeout(function () {
   }
   // Calcolo il punteggio:
   var punteggio = [];
-  for (var i = 0; i < 5; i++) {
-    if (numeriUtente.includes(numeroCasuale)) {
-      punteggio.push(sceltaUtente)
+  for (var i = 0; i < numeriUtente.length; i++) {
+    if (numeriUtente.includes(numeriCasuali[i])) {
+      punteggio.push(numeriUtente[i])
     }
   }
   // Stampo il punteggio, che sarà uguale al numero di numeri ricordati dall'utente:
@@ -50,5 +50,4 @@ setTimeout(function () {
 
   console.log('Hai indovinato ' + punteggioUtente + ' numeri: ' + punteggio + '.')
 
-  console.log(punteggio)
-}, 2000)
+}, 30000)
